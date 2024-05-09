@@ -47,8 +47,8 @@ let valueInBoolean = Boolean(grade)
 
 let point = true
 let valueInString = String(point)
-console.log(typeof valueInString);
-console.log(valueInString);
+// console.log(typeof valueInString);
+// console.log(valueInString);
 
 // what if we try to convert diffrent data types in Strings
 
@@ -58,3 +58,54 @@ console.log(valueInString);
 // false => false
 // null => null
 // undefined => undefined
+
+// ************** Oprations ************** \\
+
+let value = 3
+let negvalue = -value
+// console.log(negvalue);
+
+// console.log(2+3);
+// console.log(2-3);
+// console.log(2*3);
+// console.log(2**3);
+// console.log(2/3);
+// console.log(2%3);
+
+let str1 = "hello"
+let str2 = " hozaifa"
+
+let str3 = str1 + str2;
+// console.log(str3);
+
+// don't do this tyoe of code because it is hard read
+
+// console.log("1" + 2);
+// console.log(1 + "2");
+// console.log("1" + 2 + 2);
+// console.log(1 + 2 + "2");
+
+// console.log(3 + 4 * 5 % 3);
+
+// console.log(+true);
+// console.log(+"");
+
+// let num1, num2, num3
+// num1 = num2 = num3 = 2 + 2
+
+// This is Increment and Decrement
+console.log("Increment ++");
+let a = 100
+console.log("Value of 'a' is", a);
+console.log("a++", a++)
+console.log(a);
+console.log("++a", ++a)
+console.log(a);
+
+console.log("Decriment --");
+let b = 100
+console.log("Value of 'b' is", b);
+console.log("b--", b--)
+console.log(b);
+console.log("--b", --b)
+console.log(b);
