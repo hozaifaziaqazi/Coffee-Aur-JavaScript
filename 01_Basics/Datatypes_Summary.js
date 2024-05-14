@@ -1,4 +1,5 @@
-console.log("Summary Of Datatypes");
+console.log("Summary Of DataTypes");
+// console.log("DataTypes In Js");
 
 // There Are Two types of Datatypes:
 // Premitive
@@ -50,9 +51,33 @@ console.log("Summary Of Datatypes");
 // Examples:
 // let heros = ["ironman", "thor", "hulk", "spiderman"];
 // let hero = { name: "ironman", age: 45 }
-//let myfunc = function() {console.log("Hello My Function");}
+// let myfunc = function() {console.log("Hello My Function");}
 
-//console.log(typeof heros); // output will be 'object' 
-//console.log(typeof (hero)); // output will be 'object'
-//console.log(typeof myfunc); // output will be 'function' but real is 'object function' 
+// console.log(typeof heros); // output will be 'object' 
+// console.log(typeof (hero)); // output will be 'object'
+// console.log(typeof myfunc); // output will be 'function' but real is 'object function' 
 /* <--------- Non-Premitive-End ---------> */
+
+console.log("Memories In Js");
+
+// "Stack" use all (Premitive) DataTypes 
+// Stack make a copy and do changes in that copy
+// "Heap" use all (Non-Premitive)
+// heap use refreces that will change orignal variabal value
+let myYoutubename = "hozaifaziaqazi";
+let anothername = myYoutubename
+anothername = "hozaifa"
+// console.log(myYoutubename);
+// console.log(anothername);
+
+let UserOne = {
+    name: "Hozaifa Zia",
+    username: "hozaifaziaqazi",
+    email: "hozaifaziaqazi@gmail.com",
+}
+let UserTwo = UserOne
+console.log(UserOne.email);
+console.log(UserTwo.email);
+UserTwo.email = "hozaifa@outlook.com"
+console.log(UserOne.email);
+console.log(UserTwo.email);
