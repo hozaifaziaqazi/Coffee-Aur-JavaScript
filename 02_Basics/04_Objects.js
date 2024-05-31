@@ -1,8 +1,12 @@
-console.log('Constructer Objects In JS');
+console.log('Objects In JS');
 
-/* ++++++++++++++++ Literal Objects ++++++++++++++++ */
+/* ++++++++++++++++++++ Objects ++++++++++++++++++++ */
+
+
 
 /* <---------- Constructer Objects Start ----------> */
+
+// console.log('Constructer Objects In JS');
 
 /* ############### SingleTon Objects ############### */
 const User = new Object();
@@ -43,7 +47,15 @@ const obj4 = Object.assign(obj1, obj2, obj3);
 const obj5 = {...obj1, ...obj2, ...obj3}
 // console.log(obj5);
 
-/* ############### Objects In Array ############### */
+/* <----------- Constructer Objects End -----------> */
+
+
+
+
+
+/* ------------- Objects In Array Start ------------- */
+
+// console.log('Objects In Array In JS');
 
 const arr_obj = [
     {
@@ -73,9 +85,29 @@ const arr_obj = [
 // console.log(Object.values(arr_obj[2]));
 
 
-console.log(Object.entries(User));
-console.log(arr_obj[0].hasOwnProperty("id"));
+// console.log(Object.entries(User));
+// console.log(arr_obj[0].hasOwnProperty("id"));
+
+/* -------------- Objects In Array End -------------- */
 
 
 
-/* <----------- Constructer Objects End -----------> */
+
+
+/* <---------- Objects De-Stucture Start ----------> */
+
+console.log('Objects De-Stucture In JS');
+
+const Course = {
+    coursename: "JavaScript In Urdu",
+    price: 1000,
+    isFree: false,
+    courseInstructer: "Hozaifa Zia",
+}
+
+// console.log(Course.courseInstructer);
+
+const {courseInstructer: author} = Course
+console.log(author);
+
+/* <----------- Objects De-Stucture End -----------> */
