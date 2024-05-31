@@ -1,13 +1,8 @@
-console.log('Objects In JS');
+console.log('Objects Literal In JS');
 
-/* ++++++++++++++++++++ Objects ++++++++++++++++++++ */
+/* ++++++++++++++++ Objects Literal ++++++++++++++++ */
 
-/* <---------------- Objects Start ----------------> */
-
-// Single Ton Object
-// Object.create
-
-/* ################# Object Literal ################# */
+/* <------------ Objects Literal Start ------------> */
 
 let MySymbol = Symbol("Key1")
 
@@ -51,4 +46,4 @@ User.greetingTwo = function () {
 
 
 
-/* <----------------- Objects End -----------------> */
+/* <------------- Objects Literal End -------------> */
