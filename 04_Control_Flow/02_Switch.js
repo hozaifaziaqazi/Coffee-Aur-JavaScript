@@ -8,9 +8,32 @@
 // }
 
 
-const month = "march"
+const Month = "April"
 
-switch (month) {
+switch (Month) {
+    case 'January':
+        console.log(1);
+        break;
+    case 'February':
+        console.log(2);
+        break;
+    case 'March':
+        console.log(3);
+        break;
+    case 'April':
+        console.log(4);
+        break;
+
+    default:
+        console.log('No Match In Month');
+        break;
+}
+
+
+
+const Month_In_Num = 3
+
+switch (Month_In_Num) {
     case 1:
         console.log('January');
         break;
