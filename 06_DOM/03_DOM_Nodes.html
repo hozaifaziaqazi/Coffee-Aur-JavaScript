@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child  Nodes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = 'main'
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "new div")
+    // div.style.backgroundColor = 'green'
+    div.style.color = 'skyblue'
+    div.style.padding = '12px'
+    // div.innerText = 'Chai aur JavaScript'
+    const addText = document.createTextNode('Chai aur JavaScript')
+    div.appendChild(addText)
+    document.body.append(div)
+</script>
+</html>
