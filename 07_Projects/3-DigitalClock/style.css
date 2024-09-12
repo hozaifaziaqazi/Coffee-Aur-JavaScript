@@ -1,0 +1,64 @@
+body {
+    background-color: #212121;
+    color: #fff;
+}
+
+#all {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    /* height: 40vh; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+#clock {
+    font-size: 40px;
+    background-color: orange;
+    padding: 20px 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+#date {
+    font-size: 40px;
+    background-color: orange;
+    padding: 20px 50px;
+    padding-right: 13px;
+    padding-left: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#titleDate {
+    margin-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#titleTime {
+    margin-left: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#banner {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}

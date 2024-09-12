@@ -8,8 +8,11 @@
 
 1. [Color Changer](/07_Projects/1-ColorChanger/index.html)
 2. [BMI Calculator](/07_Projects/2-BMICalculator/index.html)
+3. [Digital Clock](/07_Projects/3-DigitalClock/index.html)
 
 <hr>
+<br>
+<br>
 
 # Solution Code
 
@@ -320,6 +323,140 @@ form.addEventListener('submit', (e) => {
 
     
 })
+```
+
+</details>
+
+<hr>
+
+### Project 3: Digital Clock
+
+<details>
+
+<summary>HTML</summary>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <title>Your Local Time</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
+        >Youtube channel</a
+      >
+    </nav>
+    <div id="all">
+      <div id="banner">
+        <span id="titleDate">Local Date</span>
+        <span id="titleTime">Local Time</span>
+      </div>
+      <div class="center">
+        <div id="date"></div>
+        <div id="clock"></div>
+      </div>
+    </div>
+    <script src="chaiaurcode.js"></script>
+  </body>
+</html>
+```
+</details>
+
+<details>
+<summary>CSS</summary>
+
+```css
+body {
+    background-color: #212121;
+    color: #fff;
+}
+
+#all {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+#clock {
+    font-size: 40px;
+    background-color: orange;
+    padding: 20px 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+#date {
+    font-size: 40px;
+    background-color: orange;
+    padding: 20px 50px;
+    padding-right: 13px;
+    padding-left: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#titleDate {
+    margin-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#titleTime {
+    margin-left: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#banner {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+```
+</details>
+
+<details>
+<summary>JavaScript</summary>
+
+```javascript
+const clock = document.getElementById('clock');
+const date = document.getElementById('date');
+// const clock = document.querySelector('#clock');
+
+
+setInterval(() => {
+    newTime = new Date();
+    clock.innerHTML = newTime.toLocaleTimeString();
+}, 1000)
+
+setInterval(() => {
+    newDate = new Date();
+    date.innerHTML = newDate.toLocaleDateString()
+}, 1000)
 ```
 
 </details>
