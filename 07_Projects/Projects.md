@@ -13,6 +13,7 @@
 3. [Digital Clock](/07_Projects/3-DigitalClock/index.html)
 4. [Guess The Number](/07_Projects/4-GuessTheNumber/index.html)
 5. [Keyboard](/07_Projects/5-Keyboard/index.html)
+6. [Unlimited Colors](/07_Projects/6-UnlimitedColors/index.html)
 
 <hr>
 <br>
@@ -822,6 +823,116 @@ window.addEventListener('keydown', (e) => {
     </div>
     `;
 })
+```
+
+</details>
+
+<hr>
+
+### Project 6: Unlimited Colors
+
+<details><summary>HTML</summary>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Backgroung Color Changing Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
+        >Youtube channel</a
+      >
+    </nav>
+
+    <h1 class="h1">Start should change the Background color every second</h1>
+
+    <div class="main">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    </div>
+    <script src="chaiaurcode.js"></script>
+  </body>
+</html>
+
+```
+
+</details>
+
+<details><summary>CSS</summary>
+
+```css
+body{
+    background-color: #212121; 
+    color: #fff
+}
+
+.h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+button{
+    font-size: 20px;
+}
+
+#start{
+    margin-right: 10px;
+    
+}
+```
+
+</details>
+
+<details>
+<summary>JavaScript</summary>
+
+```javascript
+// genrate random colors
+
+const randomColor = () => {
+    let hex = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += hex[Math.floor(Math.random() * 16)];
+    }
+    return color;
+};
+
+let intervalID = undefined
+
+let startChanchingColor = () => {
+    if (!intervalID) {
+        intervalID = setInterval(colorChanging, 1000);
+    }
+    function colorChanging(){document.body.style.backgroundColor = randomColor();}
+};
+
+let stopChanchingColor = () => {
+    clearInterval(intervalID);
+    intervalID = null
+};
+
+document.getElementById('start').addEventListener('click', startChanchingColor);
+
+document.getElementById('stop').addEventListener('click', stopChanchingColor);
 ```
 
 </details>
