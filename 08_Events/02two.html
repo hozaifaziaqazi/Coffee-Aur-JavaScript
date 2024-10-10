@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Coffee Aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayHozaifa = function(){
+        console.log("Hi! Hozaifa");
+    }
+    setTimeout(sayHozaifa, 2000);
+
+    setTimeout(function (){
+        console.log('Chai is ready'); 
+    },2400)
+
+    setTimeout(() => {
+        console.log('But I Want Coffee'); 
+    },2800)
+
+    // setInterval(() => {
+    //     console.log('I Want Coffee'); 
+    // },2900)
+
+
+    const changeText = () => {
+        document.querySelector('h1').innerHTML = 'Best JS Series'
+    }
+
+    const changeMe = setTimeout(changeText,5000)
+    
+    document.querySelector('#stop').addEventListener('click', () => {
+        console.log('Clearing TimeOut');
+        clearTimeout(changeMe)
+        console.log('TimeOut Cleared');
+    } )
+
+</script>
+</html>
