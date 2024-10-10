@@ -1,6 +1,6 @@
 <br>
 
-# DOM Projects
+# Projects
 
 ## Project Link
 
@@ -11,12 +11,19 @@
 1. [Color Changer](/07_Projects/1-ColorChanger/index.html)
 2. [BMI Calculator](/07_Projects/2-BMICalculator/index.html)
 3. [Digital Clock](/07_Projects/3-DigitalClock/index.html)
+4. [Guess The Number](/07_Projects/4-GuessTheNumber/index.html)
+5. [Keyboard](/07_Projects/5-Keyboard/index.html)
 
 <hr>
 <br>
 <br>
 
 # Solution Code
+
+<br>
+<br>
+
+## DOM Projects
 
 ### Project 1: Color Changer
 
@@ -718,6 +725,103 @@ function newGame() {
         playGame = true
     })
 };
+```
+
+</details>
+
+<hr>
+
+<br>
+<br>
+
+## Async Projects
+
+### Project 5: Keyboard
+
+<details><summary>HTML</summary>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Event KeyCodes</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
+        >Youtube channel</a
+      >
+    </nav>
+    <div class="project">
+      <div id="insert">
+        <div class="key">Press the key and watch magic</div>
+      </div>
+    </div>
+
+    <script src="./chaiaurcode.js"></script>
+  </body>
+</html>
+```
+
+</details>
+
+<details><summary>CSS</summary>
+
+```css
+table,
+th,
+td {
+    border: 2px solid #e7e7e7;
+    width: 200px;
+    height: 100px;
+    font-size: 75px;
+}
+
+.key{
+    font-size: 40px;
+}
+
+.project {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.color {
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+}
+```
+
+</details>
+
+<details>
+<summary>JavaScript</summary>
+
+```javascript
+const insert = document.getElementById("insert");
+
+window.addEventListener('keydown', (e) => {
+    insert.innerHTML = `
+    <div class='color'>
+    <table>
+    <tr>
+    <td>${e.key === ` ` ? 'Space' : e.key}</td>
+    </tr>
+    </table>
+    </div>
+    `;
+})
 ```
 
 </details>
