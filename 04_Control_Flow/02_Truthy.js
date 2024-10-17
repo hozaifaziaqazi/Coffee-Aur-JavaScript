@@ -24,7 +24,7 @@ if (Object.keys(EmptyObject).length === 0) {
 
 
 // Truthy Values
-// true, {}, [], 42, "0", "false", " ", function(){}, new Date(), -42, 12n, 3.14, -3.14, Infinity, -Infinity
+// true, {}, [], 42, "0", "false", " ", function(){}, new, -42, 12n, 3.14, -3.14, Infinity, -Infinity
 
 
 
